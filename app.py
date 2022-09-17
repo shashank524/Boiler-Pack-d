@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, render_template
 
 import random, time
 
@@ -6,15 +6,20 @@ app = Flask(__name__)
 
 @app.route('/')
 
+def index():
+    return render_template("index.html")
+
+@app.route('/get')
+
 def count_time():
     counter = random.randint(0, 201)
     print(counter)
-    time.sleep(2)
+
     if counter > 100: 
-        print("Busy")
+        return "Busy"
     else:
-        print("Empty")
-    count_time()
+        return "Empty"
+
 
 if __name__ == '__main__':
     app.run()
