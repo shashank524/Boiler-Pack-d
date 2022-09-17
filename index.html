@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function takeInput(){
+            var counter = Math.random() * 201;
+            setTimeout(() => {}, 60000)
+            if (counter > 100){
+                console.log("Busy");
+            }
+            else{
+                console.log("OK");
+            }
+            takeInput();
+        }
+        // takeInput();
+
+    </script>
+</body>
+</html>
