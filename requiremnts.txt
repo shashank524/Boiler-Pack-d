@@ -1,1 +1,4 @@
 flask
+ramdom
+time
+mysql-connector-python

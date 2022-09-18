@@ -1,31 +1,31 @@
 from flask import Flask, request, render_template
 import mysql.connector as mc
 
-import random, time
+import random
+import time
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./static/")
+
 
 @app.route('/')
-
 def index():
     return render_template("index.html")
 
-@app.route('/get')
 
+@app.route('/get')
 def count_time():
     counter = random.randint(0, 201)
     print(counter)
 
-    if counter > 100:   
+    if counter > 100:
         return "Busy"
     else:
         return "Empty"
 
+
 @app.route('/auth')
-
 def login_page():
-    return render_template('login.html')
-
+    return render_template('./login.html')
 
 
 # def signup(email, user, passwd):
@@ -40,10 +40,11 @@ def log():
     print(email)
     passwd = request.args.get('password')
     print(passwd)
-    
+
     global name
     print("connecting to AWS")
-    mydb = mc.connect(host="fus-cdbr-east-03.cleardb.com", user="b515c4ea501b1e", password="5e6c4706", database="heroku_a9372e997029ff6")
+    mydb = mc.connect(host="localhost", user="root",
+                      password="Arnav123", database="packd")
     print("connected")
     print(email)
     print(passwd)
@@ -56,8 +57,9 @@ def log():
         else:
             return 0
 
+@app.route('/info')
+def info():
+    return render_template("stats.html")
+
 if __name__ == '__main__':
     app.run()
-
-
-

@@ -1,0 +1,171 @@
+<html lang="en"><head>
+    <title>Boiler Pack'd - About Page</title>
+    <style>
+      img{
+        width:500px;
+        height:500px;
+        border-radius:60px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/static/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="/static/assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="/static/assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/assets/css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/static/index.js"></script>
+<!--
+
+TemplateMo 561 Boiler Pack'd
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="/static/index.html">
+                <i class="bx bx-buildings bx-sm text-dark"></i>
+                <span class="text-dark h4">Boiler</span> <span class="text-primary h4">Pack'd</span>
+            </a>
+            <button class="navbar-toggler border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center navbar-collapse flex-fill d-lg-flex justify-content-lg-between collapse" id="navbar-toggler-success" style="">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/static/friends.html">Friends</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/auth">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"></a>
+                    <a class="nav-link" href="#"></a>
+                    <a class="nav-link" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light w-100">
+
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Team Member -->
+    <section class="container">
+        <div class="pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                <h2 class="h2 py-5 typo-space-line">Location</h2>
+                <p class="text-muted light-300">
+
+                </p>
+            </div>
+
+            <div class="col-lg-9 row">
+                <div class="team-member col-md-4" >
+                    <img  class="team-member-img img-fluid" onclick="statsPage('Corec')" src="/static/purdue-hero-1.jpg" alt="Card image">
+
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Corec</li>
+
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img onclick="statsPage('Study')" class="team-member-img img-fluid" src="/static/download.jpg" alt="Card image">
+
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Study Spaces and Libraries </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img onclick="statsPage('Dining')" class="team-member-img img-fluid" src="/static/download-1.jpg" alt="Card image">
+
+
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li><a href="https://dining.purdue.edu/residentialdining/locations/index.html">Dinning Courts</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Member -->
+
+    <!-- Start Our Partner -->
+
+    <!--End Our Partner-->
+
+    <!-- Start Progress -->
+
+    <!-- End Progress -->
+
+    <!-- Start Choice -->
+
+    <!-- End Choice -->
+
+    <!-- Start Aim -->
+
+    <!-- End Aim -->
+
+    <!-- Start Contact -->
+
+    <!-- End Contact -->
+
+
+    <!-- Start Footer -->
+
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="/static/assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="/static/assets/js/custom.js"></script>
+    <script>
+        function getStatus(){
+            let rawText;
+            $.get('/get', { msg: rawText }).done(function(data){
+                console.log(data)
+            });
+        }
+        setInterval(getStatus, 2000);
+        function getInfo(location){
+
+        }
+    </script> 
+
+
+
+
+
+</body></html>

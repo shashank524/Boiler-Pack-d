@@ -23,14 +23,14 @@ body{
   }
   
   .custom-shape-divider-bottom-1606476473 .shape-fill {
-    fill: #61C6F5;
+    fill: #6266ea;
   }
   
   /** For mobile devices **/
   @media (max-width: 767px) {
     .custom-shape-divider-bottom-1606476473 svg {
         width: calc(150% + 1.3px);
-        height: 300px;
+        height: 150px;
     }
   }
   
@@ -82,7 +82,7 @@ body{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border: 2px solid #6266ea;
     padding: 14px 10px;
     width: 200px;
     outline: none;
@@ -149,7 +149,7 @@ body{
     height: 40px;
     width: 200px;
     border-radius: 20px;
-    color: #61C6F5;
+    color: #6266ea;
     font-size: 25px;
     box-shadow: 8px 8px 50px #000;
   }
