@@ -1,3 +1,4 @@
+import email
 from flask import Flask, request, render_template
 import mysql.connector as mc
 
@@ -56,6 +57,17 @@ def log():
             return 1
         else:
             return 0
+
+# def friends():
+#     email = request.args.get('email')
+#     mydb = mc.connect(host="localhost", user="root",
+#                       password="Arnav123", database="packd")
+#     print("connected")
+#     mycursor = mydb.cursor()
+#     mycursor.execute(f"select {email} from user_data;")
+#     result = mycursor.fetchall()
+#     for i in result:
+#         print(i0)
 
 @app.route('/info')
 def info():

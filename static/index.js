@@ -6,8 +6,11 @@
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+var image = 0;
+
 const firebaseConfig = {    
-    apiKey: "AIzaSyCiCH4KfBhGdtX3DupdtYKzVQeTro7BiFQ",
+    apiKey: "",
     authDomain: "hello-world-project-772a9.firebaseapp.com",
     projectId: "hello-world-project-772a9",
     storageBucket: "hello-world-project-772a9.appspot.com",
@@ -17,22 +20,25 @@ const firebaseConfig = {
 };
 
 var imagePath = "";
-
-function statsPage(location){
-    window.location.replace('/info');
-
-    console.log(location);
-
-    if(location=="Corec"){
+window.document.onload = function(e) {
+    if(image==1){
         document.querySelector("#stats-image").setAttribute("src", "/static/purdue-hero-1.jpg");
     }
-    else if(location=="Dining"){
+    else if(image==2){
         document.querySelector("#stats-image").setAttribute("src", "/static/download-1.jpg");
     }
     else{
         document.querySelector("#stats-image").setAttribute("src", "/static/download.jpg");
-
+    
     }
+}
+
+
+
+
+function setValue(integer){
+    image = integer;
+    // window.location.replace("/info")
 }
 
 
