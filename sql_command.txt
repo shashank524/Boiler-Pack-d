@@ -1,0 +1,6 @@
+LOAD DATA INFILE '/home/shashank/Projects/Boiler-Pack-d/friend_data.csv'
+ INTO TABLE friend_data
+ FIELDS TERMINATED BY ','
+ ENCLOSED BY '"'
+ LINES TERMINATED BY '\n'
+ IGNORE 1 ROWS;
