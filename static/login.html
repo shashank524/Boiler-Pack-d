@@ -6,7 +6,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel="stylesheet" href="/static/styles/login-style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
 </head>
 
@@ -42,34 +42,11 @@
 
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-
-  <script>
-    function login() {
-      let email = $('#login-email').val();
-      console.log(email);
-      let password = $('#login-password').val();
-      console.log(password);
-
-      if (email != "") {
-        $.get('/login', { email: email, password: password }).done(function (data) {
-          if (data == 1) {
-            window.location.href = "/static/index.html";
-          }
-          else {
-            alert("Wrong email or password!!");
-          }
-        })
-      }
-    }
-
-
-  </script>
-
-  <!-- <script src="/static/login.js"></script> -->
-
-
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <!-- <script src="/static/auth.js"></script> -->
+  <script src="/static/index.js"></script>
 </body>
 
 </html>
