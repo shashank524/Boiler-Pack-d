@@ -34,29 +34,29 @@ def login_page():
 #     mycursor = mydb.cursor()
 #     mycursor.execute(f"insert into user_data values('{email}', '{user}', '{passwd}');")
 
-@app.route('/login')
-def log():
+# @app.route('/login')
+# def log():
 
-    email = request.args.get('email')
-    print(email)
-    passwd = request.args.get('password')
-    print(passwd)
+#     email = request.args.get('email')
+#     print(email)
+#     passwd = request.args.get('password')
+#     print(passwd)
 
-    global name
-    print("connecting to AWS")
-    mydb = mc.connect(host="localhost", user="root",
-                      password="Arnav123", database="packd")
-    print("connected")
-    print(email)
-    print(passwd)
-    mycursor = mydb.cursor()
-    mycursor.execute(f"select {email}, {passwd} from user_data;")
-    result = mycursor.fetchall()
-    for i in result:
-        if (email, passwd) == i:
-            return 1
-        else:
-            return 0
+#     global name
+#     print("connecting to AWS")
+#     mydb = mc.connect(host="localhost", user="root",
+#                       password="Arnav123", database="packd")
+#     print("connected")
+#     print(email)
+#     print(passwd)
+#     mycursor = mydb.cursor()
+#     mycursor.execute(f"select {email}, {passwd} from user_data;")
+#     result = mycursor.fetchall()
+#     for i in result:
+#         if (email, passwd) == i:
+#             return 1
+#         else:
+#             return 0
 
 # def friends():
 #     email = request.args.get('email')

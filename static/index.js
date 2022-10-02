@@ -10,7 +10,7 @@
 var image = 0;
 
 const firebaseConfig = {    
-    apiKey: "",
+    apiKey: "AIzaSyCiCH4KfBhGdtX3DupdtYKzVQeTro7BiFQ",
     authDomain: "hello-world-project-772a9.firebaseapp.com",
     projectId: "hello-world-project-772a9",
     storageBucket: "hello-world-project-772a9.appspot.com",
@@ -59,33 +59,50 @@ auth.onAuthStateChanged(user => {
     }
     else{
         console.log("user logged out");
+        // window.location.href = "/auth";
     }
 });
+
+function signOut () {
+    auth.signOut().then(() => {
+        // Sign-out successful.
+        alert("Signing Out");
+        window.location.href = "/auth";
+      }).catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+}
 
 function register(){
     email = document.getElementById("signup-email").value;
     password = document.getElementById("signup-password").value;
 
     console.log("creating user")
+    //alert(typeof(email));
+    alert(email.slice(-11,));
 
-    auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
+    if (email.slice(-11,) === "@purdue.edu") {
+        auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            var user = userCredential.user;
 
-        // [END_EXCLUDE]
-    });
-
+            // [START_EXCLUDE]
+            if (errorCode == 'auth/weak-password') {
+              alert('The password is too weak.');
+            } else {
+              alert(errorMessage);
+            }
+            console.log(error);
+    
+            // [END_EXCLUDE]
+        });
+    } else {
+        alert("Use a @purdue.edu email!");
+    }
 }
-
-
 
 function validate_email(email){
     expression = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -134,6 +151,7 @@ logInForm.addEventListener('submit', (e) => {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        var user = userCredential.user;
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
           alert('Wrong password.');
